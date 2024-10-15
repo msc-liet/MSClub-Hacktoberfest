@@ -13,5 +13,8 @@ def divide(a, b):
         return "Cannot divide by zero"
     return a / b
 
+def exponentiate(base, exp):
+    return base ** exp
+
 if __name__ == "__main__":
     print("Basic Calculator is ready!")
