@@ -1,9 +1,22 @@
-# count_vowels.py
-def count_vowels(s):
+def count_vowels_and_consonants(s):
     vowels = "aeiouAEIOU"
-    count = sum(1 for char in s if char in vowels)
-    return count
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+    
+    vowel_count = sum(1 for char in s if char in vowels)
+    consonant_count = sum(1 for char in s if char in consonants)
+    
+    return vowel_count, consonant_count
 
 if __name__ == "__main__":
-    string = input("Enter a string: ")
-    print(f"Number of vowels in '{string}': {count_vowels(string)}")
+    while True:
+        string = input("Enter a string (or type 'exit' to quit): ")
+        if string.lower() == 'exit':
+            print("Exiting the program. Goodbye!")
+            break
+        elif not string:  # Check for empty string
+            print("Please enter a non-empty string.")
+            continue
+        
+        vowel_count, consonant_count = count_vowels_and_consonants(string)
+        print(f"Number of vowels in '{string}': {vowel_count}")
+        print(f"Number of consonants in '{string}': {consonant_count}")
