@@ -1,4 +1,3 @@
-# hello_world.py
 def greet():
     print("Hello, Hacktoberfest!")
 
