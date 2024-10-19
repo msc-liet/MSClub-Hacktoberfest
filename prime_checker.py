@@ -1,4 +1,3 @@
-# prime_checker.py
 def is_prime(n):
     if n <= 1:
         return False
@@ -8,5 +7,12 @@ def is_prime(n):
     return True
 
 if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print(f"{num} is a prime number: {is_prime(num)}")
+    try:
+        num = int(input("Enter a positive integer: "))
+        if num < 0:
+            print("Please enter a positive integer.")
+        else:
+            print(f"{num} is a prime number: {is_prime(num)}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
