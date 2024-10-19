@@ -1,12 +1,15 @@
-# fibonacci.py
 def fibonacci(n):
     a, b = 0, 1
-    sequence = []
     for _ in range(n):
-        sequence.append(a)
+        yield a
         a, b = b, a + b
-    return sequence
 
 if __name__ == "__main__":
-    n = int(input("Enter the number of Fibonacci terms: "))
-    print(f"Fibonacci sequence: {fibonacci(n)}")
+    try:
+        n = int(input("Enter the number of Fibonacci terms: "))
+        if n < 0:
+            print("Please enter a positive integer.")
+        else:
+            print(f"Fibonacci sequence: {list(fibonacci(n))}")
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
