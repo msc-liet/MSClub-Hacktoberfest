@@ -1,6 +1,12 @@
-# hello_world.py
-def greet():
-    print("Hello, Hacktoberfest!")
+def greet(name):
+    """Greet the user with their name."""
+    print(f"Hello, {name}! Welcome to Hacktoberfest!")
 
 if __name__ == "__main__":
-    greet()
+    name = input("Please enter your name: ").strip()
+
+    if not name:
+        print("Error: You must enter a name.")
+    else:
+        greet(name)
+
