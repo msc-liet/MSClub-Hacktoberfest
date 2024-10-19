@@ -1,4 +1,3 @@
-# fibonacci.py
 def fibonacci(n):
     a, b = 0, 1
     sequence = []
