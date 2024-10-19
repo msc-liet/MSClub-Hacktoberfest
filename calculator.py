@@ -1,4 +1,3 @@
-# calculator.py
 def add(a, b):
     return a + b
 
@@ -15,3 +14,4 @@ def divide(a, b):
 
 if __name__ == "__main__":
     print("Basic Calculator is ready!")
+
