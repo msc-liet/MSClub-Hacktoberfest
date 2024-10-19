@@ -1,4 +1,5 @@
 # fibonacci.py
+
 def fibonacci(n):
     a, b = 0, 1
     sequence = []
@@ -8,5 +9,11 @@ def fibonacci(n):
     return sequence
 
 if __name__ == "__main__":
-    n = int(input("Enter the number of Fibonacci terms: "))
-    print(f"Fibonacci sequence: {fibonacci(n)}")
+    try:
+        n = int(input("Enter the number of Fibonacci terms: "))
+        if n < 0:
+            print("Please enter a non-negative integer.")
+        else:
+            print(f"Fibonacci sequence: {fibonacci(n)}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
