@@ -1,6 +1,5 @@
-# fizzbuzz.py
-def fizzbuzz(n):
-    for i in range(1, n + 1):
+def fizzbuzz(start, end):
+    for i in range(start, end + 1):
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz")
         elif i % 3 == 0:
@@ -11,4 +10,15 @@ def fizzbuzz(n):
             print(i)
 
 if __name__ == "__main__":
-    fizzbuzz(20)
+    while True:
+        try:
+            start = int(input("Enter the start of the range (integer): "))
+            end = int(input("Enter the end of the range (integer): "))
+            if start > end:
+                print("Start must be less than or equal to end.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter valid integers.")
+
+    fizzbuzz(start, end)
