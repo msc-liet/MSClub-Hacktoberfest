@@ -7,7 +7,13 @@ def subtract(a, b):
 
 def multiply(a, b):
     return a * b
+    
+def remainder(a, b):
+    return a % b 
 
+def exponent(a,b):
+    return a**b
+    
 def divide(a, b):
     if b == 0:
         return "Cannot divide by zero"
