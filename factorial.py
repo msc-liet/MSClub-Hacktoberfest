@@ -5,5 +5,13 @@ def factorial(n):
     return n * factorial(n - 1)
 
 if __name__ == "__main__":
-    num = int(input("Enter a number: "))
+    while True:
+        try:
+            num = int(input("Enter a non-negative integer: "))
+            if num < 0:
+                raise ValueError("The number must be non-negative.")
+            break
+        except ValueError as e:
+            print(f"Invalid input: {e}. Please try again.")
+    
     print(f"The factorial of {num} is {factorial(num)}")
