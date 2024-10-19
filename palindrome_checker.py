@@ -1,6 +1,15 @@
 # palindrome_checker.py
 def is_palindrome(s):
-    return s == s[::-1]
+    # Convert to lowercase to make the check case-insensitive
+    s = s.lower()
+    left, right = 0, len(s) - 1
+    
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
 
 if __name__ == "__main__":
     word = input("Enter a word: ")
