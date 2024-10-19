@@ -1,7 +1,12 @@
-# palindrome_checker.py
-def is_palindrome(s):
-    return s == s[::-1]
+def greet(name):
+    """Greet the user with their name."""
+    print(f"Hello, {name}! Welcome to Hacktoberfest!")
 
 if __name__ == "__main__":
-    word = input("Enter a word: ")
-    print(f"{word} is a palindrome: {is_palindrome(word)}")
+    name = input("Please enter your name: ").strip()
+
+    if not name:
+        print("Error: You must enter a name.")
+    else:
+        greet(name)
+
