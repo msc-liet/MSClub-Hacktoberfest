@@ -4,6 +4,12 @@ def celsius_to_fahrenheit(c):
 
 def fahrenheit_to_celsius(f):
     return (f - 32) * 5/9
+    
+def celsius_to_kelvin(celsius):
+    return celsius + 273.15
+
+def fahrenheit_to_kelvin(fahrenheit):
+    return (fahrenheit - 32) * 5/9 + 273.15   
 
 if __name__ == "__main__":
     temp = float(input("Enter temperature: "))
