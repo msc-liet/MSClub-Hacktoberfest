@@ -1,6 +1,6 @@
 # fizzbuzz.py
-def fizzbuzz(n):
-    for i in range(1, n + 1):
+def fizzbuzz(start, end):
+    for i in range(start, end + 1):
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz")
         elif i % 3 == 0:
@@ -11,4 +11,8 @@ def fizzbuzz(n):
             print(i)
 
 if __name__ == "__main__":
-    fizzbuzz(20)
+    # Get user input for the range
+    start = int(input("Enter the start of the range: "))
+    end = int(input("Enter the end of the range: "))
+    
+    fizzbuzz(start, end)
