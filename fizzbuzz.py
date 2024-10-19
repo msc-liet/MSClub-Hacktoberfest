@@ -1,14 +1,9 @@
-# fizzbuzz.py
-def fizzbuzz(n):
-    for i in range(1, n + 1):
-        if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
-        elif i % 3 == 0:
-            print("Fizz")
-        elif i % 5 == 0:
-            print("Buzz")
-        else:
-            print(i)
+def greet(name="Hacktoberfest"):
+    print(f"Hello, {name}!")
 
 if __name__ == "__main__":
-    fizzbuzz(20)
+    user_name = input("Enter your name (or press Enter for default): ")
+    if user_name.strip() == "":
+        greet()  # Calls greet with default name "Hacktoberfest"
+    else:
+        greet(user_name)  # Calls greet with user-provided name
