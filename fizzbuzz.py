@@ -1,5 +1,5 @@
 # fizzbuzz.py
-def fizzbuzz(n):
+def fizzbuzz(n:int):
     """Prints the numbers from 1 to n. 
     For multiples of 3, print "Fizz" instead of the number. 
     For the multiples of 5, print "Buzz". 
