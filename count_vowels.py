@@ -1,6 +1,14 @@
 # count_vowels.py
-def count_vowels(s):
-    vowels = "aeiouAEIOU"
+def count_vowels(s:str)->int:
+    """Counts the number of vowels in a string.
+
+    Args:
+        s(str): The string to be parsed for vowels.
+
+    Returns:
+        The number of vowels in the specifed string. 
+    """
+    vowels = set("aeiouAEIOU")
     count = sum(1 for char in s if char in vowels)
     return count
 
