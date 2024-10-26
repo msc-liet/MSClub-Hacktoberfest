@@ -1,5 +1,13 @@
 # fibonacci.py
-def fibonacci(n):
+def fibonacci(n:int)->list[int]:
+    """Returns Fibonacci sequence of a specified length.
+
+    Args:
+        n(int): The length of the sequence.
+
+    Returns:
+        The Fibonacci sequence of the specified length.
+    """
     a, b = 0, 1
     sequence = []
     for _ in range(n):
