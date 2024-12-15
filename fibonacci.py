@@ -1,5 +1,10 @@
 # fibonacci.py
 def fibonacci(n):
+    """Generate Fibonacci sequence up to n terms."""
+    if n < 0:
+        print("Please enter a non-negative integer.")
+        return []
+    
     a, b = 0, 1
     sequence = []
     for _ in range(n):
@@ -8,5 +13,11 @@ def fibonacci(n):
     return sequence
 
 if __name__ == "__main__":
-    n = int(input("Enter the number of Fibonacci terms: "))
-    print(f"Fibonacci sequence: {fibonacci(n)}")
+    try:
+        n = int(input("Enter the number of Fibonacci terms: "))
+        fib_sequence = fibonacci(n)
+        # Format the output as a string
+        fib_string = ', '.join(map(str, fib_sequence))
+        print(f"Fibonacci sequence: {fib_string}")
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
