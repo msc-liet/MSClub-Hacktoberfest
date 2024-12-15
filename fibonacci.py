@@ -1,4 +1,3 @@
-# fibonacci.py
 def fibonacci(n):
     a, b = 0, 1
     sequence = []
@@ -9,4 +8,7 @@ def fibonacci(n):
 
 if __name__ == "__main__":
     n = int(input("Enter the number of Fibonacci terms: "))
-    print(f"Fibonacci sequence: {fibonacci(n)}")
+    fib_sequence = fibonacci(n)
+    # Formatting the output as a string
+    print(f"Fibonacci sequence: {', '.join(map(str, fib_sequence))}")
+
